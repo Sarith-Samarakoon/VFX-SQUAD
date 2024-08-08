@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CONTACT US</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="css/contact.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="images/VFX SQUAD H_Logo_web.png" width="200" height="58" alt=""/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"> <a class="nav-link" href="Home.html">HOME <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">ABOUT US</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="showcase.html">SHOWCASE</a></li>
+      <li class="nav-item"> <a class="nav-link" href="Course.html">COURSE</a></li>
+      <li class="nav-item"> <a class="nav-link" href="#">CONTACT US</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="text-container">
+    <h2>LET’S TALK ABOUT YOUR CREATIVE DREAMS.</h2>
+    <h3>
+      Prior learning or professional experience is not necessary to apply
+      for a course, although applicants should be aware that all courses
+      provided by VFX SQUAD Academy of Digital Arts are demanding courses
+      that require commitment and dedication.
+    </h3>
+
+    <div class="contact-info">
+      <div>
+        <h4>Call us</h4>
+        <p><i class="fa-solid fa-phone icon"></i>+94 712 305 000</p>
+      </div>
+      <div>
+        <h4>Chat with us</h4>
+        <p>
+          <i class="fa-brands fa-facebook icon"></i>
+          <a href="https://www.facebook.com/profile.php?id=100086902017667" target="_blank">FACEBOOK</a>
+        </p>
+        <p>
+          <a href="https://wa.me/94712305000" target="_blank">
+            <i class="fa-brands fa-whatsapp icon"></i>
+            <span class="whatsapp-text">WHATSAPP</span>
+          </a>
+        </p>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p>
+          <i class="fa-solid fa-map-marker-alt icon"></i>125, VERALUPA OLD
+          ROAD, RATNAPURA.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="form"><img src="images/Contact.jpg" alt="Placeholder image" width="324" height="499" class="img-fluid rounded">
+  <div class="form_info">
+        <h2>If you would like us to contact you…</h2>
+        <h3>
+          Please fill in the below form with real information. You’ll also be
+          subscribed to our mailing list. Hope you won’t mind. Don’t worry, we
+          won’t spam you!
+        </h3>
+
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          id="contactForm"
+          target="hidden_iframe"
+          onsubmit="submitted=true;"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="69ec61ca-3558-489a-b68e-32977790756f"
+          />
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="first_name"><b>First Name:</b></label>
+              <input
+                type="text"
+                class="form-control"
+                name="first_name"
+                id="first_name"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="last_name"><b>Last Name:</b></label>
+              <input
+                type="text"
+                class="form-control"
+                id="last_name"
+                name="last_name"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mobile"><b>WhatsApp Number:</b></label>
+            <input
+              type="tel"
+              class="form-control"
+              id="mobile"
+              name="mobile"
+              placeholder="+94 XX XXX XXXX"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email"><b>Email:</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="interested_course"><b>Interested Course:</b></label>
+              <select
+                id="interested_course"
+                name="interested_course"
+                class="form-control"
+                required
+              >
+                <option value="" disabled selected>Select your course</option>
+                <option value="3ds Max Basic">3ds Max Basic</option>
+                <option value="3ds Max Modeling">3ds Max Modeling</option>
+                <option value="3ds Max Texturing">3ds Max Texturing</option>
+                <option value="3ds Max Animation">3ds Max Animation</option>
+                <option value="3ds Max Lighting">3ds Max Lighting</option>
+                <option value="3ds Max Camera">3ds Max Camera</option>
+                <option value="3ds Max Rendering">3ds Max Rendering</option>
+                <!-- Add more courses as needed -->
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="preferred_intake"><b>Preferred Intake:</b></label>
+              <select
+                id="preferred_intake"
+                name="preferred_intake"
+                class="form-control"
+                required
+              >
+                <option value="" disabled selected>Select your intake</option>
+                <option value="August 2024">August 2024</option>
+                <option value="September 2024">September 2024</option>
+                <option value="October 2024">October 2024</option>
+                <!-- Add more intakes as needed -->
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                class="form-check-input"
+                required
+              />
+              <label class="form-check-label" for="agreement">
+                I declare to the best of my knowledge that the information
+                submitted in this form is correct and I agree to the enrollment
+                policies of the Academy of VFX.
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <b>SEND MESSAGE</b>
+          </button>
+        </form>
+        <div id="responseMessage"></div>
+      </div>
+      <br />
+    </div>
+<br />
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+
+<script>
+  document.querySelector("#contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var formData = new FormData(this);
+
+    fetch(this.action, {
+      method: this.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        console.log('Response status:', response.status); // Log response status
+        if (response.ok) {
+          document.getElementById("responseMessage").textContent = "Message sent successfully!";
+          document.getElementById("responseMessage").style.color = "green";
+
+          // Reset the form fields
+          this.reset();
+
+          // Optionally, refresh the page or show a success message
+          setTimeout(() => {
+            document.getElementById("responseMessage").textContent = "";
+          }, 3000); // Clear the success message after 3 seconds
+        } else {
+          document.getElementById("responseMessage").textContent = "Failed to send message.";
+          document.getElementById("responseMessage").style.color = "red";
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error); // Log any errors
+        document.getElementById("responseMessage").textContent = "Failed to send message.";
+        document.getElementById("responseMessage").style.color = "red";
+      });
+  });
+</script>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+</body>
+</html>

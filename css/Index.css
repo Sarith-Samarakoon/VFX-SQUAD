@@ -1,0 +1,24 @@
+@charset "utf-8";
+body {
+    background-image: url(../images/Galaxy%20Loop.gif);
+}
+
+
+
+
+.container-fluid {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	top: 0;
+    left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	
+}
+.col-xl-6 a #Image3 {
+
+
+}

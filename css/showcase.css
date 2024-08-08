@@ -1,0 +1,308 @@
+.portfolio-grid {
+  margin-left: 0px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex; /* Ensures images inside .item display in a row */
+  flex-wrap: wrap; /* Allows images to wrap to the next line */
+  justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+.item img {
+  width: 300px; /* Adjust as needed */
+  height: 169px; /* Maintain aspect ratio */
+  margin-right: 0px; /* Adjust spacing between images */
+  margin-bottom: 0px; /* Adjust spacing between rows */
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Disable scroll */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  /* Add flexbox to center modal content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute; /* Absolute positioning to center vertically */
+  top: 50%; /* Move top edge to 50% of parent height */
+  left: 50%; /* Move left edge to 50% of parent width */
+  transform: translate(-50%, -50%); /* Move back to center */
+  padding: 2vw; /* Padding responsive to viewport width */
+  width: 90vw; /* Adjust width based on screen size */
+  max-width: 1489px; /* Maximum width of modal */
+  /* Include padding in the element's total width and height */
+  background: rgb(0, 0, 0); /* Add background to the modal content */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Rest of your CSS code remains the same */
+
+/* Close button hover and focus states */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal iframe {
+  width: 100%; /* Make the iframe take full width of its container */
+  height: 56.25vw; /* Calculate the height based on a 16:9 aspect ratio (9 / 16 * 100) */
+  max-height: 75vh; /* Limit the maximum height of the iframe */
+}
+
+/* Disable scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Arrow Styles */
+.arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5vw; /* Responsive width based on viewport width */
+  height: auto; /* Maintain aspect ratio */
+  padding: 1vw; /* Responsive padding */
+  color: white;
+  font-weight: bold;
+  font-size: 3vw; /* Responsive font size */
+  transition: 0.6s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: -4vw; /* Responsive left position */
+}
+
+.arrow.right {
+  right: -6.8vw; /* Responsive right position */
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container h1 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Basic reset for tabs */
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.tab-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap to the next line on smaller screens */
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs li {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 18px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0; /* Removed right margin to allow wrapping */
+}
+
+.tabs a {
+  display: block;
+  padding: 10px 15px;
+  background: #f9f9f9;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabs a.active {
+  color: #7360ff;
+}
+
+.tabs a:hover {
+  background: #e9ecef;
+}
+
+.tab-content {
+  padding: 25px;
+  border: 1px solid #000000;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  margin-top: 30px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.line {
+  position: absolute;
+  top: 62px;
+  left: 17px;
+  width: 90px;
+  height: 5px;
+  background-color: #7360ff;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  animation: moving 0.3s ease-in-out;
+}
+
+@keyframes fadeInScaleUp {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.item {
+  opacity: 0; /* Ensure the item is hidden initially */
+  transform: scale(0.9); /* Slightly scale down initially */
+  animation: fadeInScaleUp 0.5s ease-out forwards; /* Apply animation */
+}
+
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  font-size: 16px;
+}
+
+/* Pagination Buttons */
+.pagination button,
+.pagination span {
+  background-color: #ffffff;
+  color: #7360ff;
+  border: 2px solid #7360ff;
+  border-radius: 25px;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Pagination Buttons Hover */
+.pagination button:hover,
+.pagination span:hover {
+  background-color: #7360ff;
+  color: #ffffff;
+  border-color: #7360ff;
+}
+
+/* Disabled State */
+.pagination button:disabled {
+  background-color: #f0f0f0;
+  color: #999;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Active Page Number */
+.pagination .active {
+  background-color: #7360ff;
+  color: #ffffff;
+  border-color: #7360ff;
+  font-weight: bold;
+}
+
+/* Ellipsis */
+.pagination .ellipsis {
+  cursor: default;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tab-links {
+    flex-direction: column; /* Stack tabs vertically on smaller screens */
+    align-items: stretch; /* Make tabs take full width */
+  }
+
+  .tab-links li {
+    width: 100%; /* Full width for each tab */
+    text-align: center;
+  }
+
+  .line {
+    display: none; /* Hide the line on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .tab-links {
+    font-size: 14px; /* Smaller font size for very small screens */
+  }
+
+  .tab-links a {
+    padding: 12px 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Hide pagination buttons on smaller screens */
+
+@media (max-width: 576px) {
+  .pagination button {
+    display: none; /* Hide all pagination buttons */
+  }
+
+  .pagination .page-info {
+    display: block; /* Ensure page info remains visible */
+  }
+}

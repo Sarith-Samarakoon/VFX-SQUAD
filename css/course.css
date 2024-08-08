@@ -1,0 +1,11 @@
+@charset "utf-8";
+body h1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+}
+.container #accordion1 .card {
+    background-color: #000000;
+    color: #FFFFFF;
+}
